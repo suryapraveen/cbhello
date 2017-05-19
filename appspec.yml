@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+hooks:
+  BeforeInstall:
+    - location: script/AfterInstall
+      timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: script/ApplicationStart
+      timeout: 300
+      runas: ubuntu
