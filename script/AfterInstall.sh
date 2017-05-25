@@ -1,6 +1,6 @@
 #!/bin/bash
-cd /var/www/html/cbhello
+cd /var/www/html/
 bundle install
-bundle exec rake db:migrate
+#bundle exec rake db:migrate
 #bundle exec rake assets:clobber
 #bundle exec rake assets:precompile
