@@ -9,7 +9,7 @@ permissions:
     group: ubuntu
   AfterInstall:
     - location: script/AfterInstall.sh
-      runas: ubuntu
+      runas: root
   ApplicationStart:
     - location: script/ApplicationStart.sh
       runas: root
