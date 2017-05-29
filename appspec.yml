@@ -1,15 +1,15 @@
 version: 0.0
 os: ubuntu
 files:
-  - source: /
+    source: /
     destination: /var/www/html
 permissions:
-  - object: /var/www/html
+    object: /var/www/html
     owner: ubuntu
     group: ubuntu
   AfterInstall:
-    - location: script/AfterInstall.sh
+      location: script/AfterInstall.sh
       runas: root
   ApplicationStart:
-    - location: script/ApplicationStart.sh
+      location: script/ApplicationStart.sh
       runas: root
