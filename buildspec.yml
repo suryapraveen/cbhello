@@ -1,14 +1,14 @@
 version: 0.2
 
-#phases:
-  #install:
+phases:
+  install:
     commands:
       - echo Installing RSpec...
       - gem install rspec
- # build:
+ build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Ruby code...
- # post_build:
+ post_build:
     commands:
       - echo Build completed on `date`
