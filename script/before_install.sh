@@ -2,5 +2,4 @@
 
 echo Before Install Hook
 
-sudo chown -R ec2-user:ec2-user /home/ec2-user/apps/codedeploy_rails
-
+sudo chown -R ubuntu:ubuntu /home/ubuntu/codedeploy
