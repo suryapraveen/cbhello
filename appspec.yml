@@ -7,3 +7,5 @@ hooks:
 AfterInstall:
     - location: script/update_permissions.sh
       runas: ubuntu
+    - location: script/afterinstall.sh
+      runas: ubuntu
