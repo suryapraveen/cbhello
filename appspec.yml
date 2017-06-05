@@ -3,3 +3,7 @@ os: linux
 files:
   - source: .
     destination: /home/ubuntu/codedeploy
+hooks:
+AfterInstall:
+    - location: script/update_permissions.sh
+      runas: ubuntu
