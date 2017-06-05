@@ -1,5 +1,25 @@
 version: 0.0
-os: ubuntu
+os: linux
 files:
-source:/
-destination:/var/www/html
+  - source: .
+    destination: /home/ubuntu/codedeploy
+hooks:
+  BeforeInstall:
+    - location: scripts/install_and_configure_supervisord.sh
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/update_permissions.sh
+      runas: ubuntu
+    - location: scripts/configure_foreman.sh
+      runas: ubuntu
+    - location: scripts/configure_rails.sh
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      runas: ubuntu
+  ValidateService:
+    - location: scripts/validate_service.sh
+      runas: ubuntu
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      runas: ubuntu
